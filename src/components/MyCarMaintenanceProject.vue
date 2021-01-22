@@ -19,12 +19,6 @@
                 <td>{{item.lastMaintainDate}}</td>
             </tr>
             </tbody>
-<!--            <tr>-->
-<!--                <td>机油</td>-->
-<!--                <td>保养</td>-->
-<!--                <td>3 天</td>-->
-<!--                <td>2020-12-01</td>-->
-<!--            </tr>-->
         </table>
     </div>
 </template>
@@ -38,17 +32,6 @@ export default {
   },
   mounted () {
     this.msg = '我的爱车保养'
-    // this.axios.get('').then((response) => {
-    //   console.log(response.data)
-    // })
-    this.projects = [
-      {
-        name: '机油',
-        type: '保养',
-        cycle: '3 天',
-        lastMaintainDate: '2020-12-01'
-      }
-    ]
   }
 }
 </script>
