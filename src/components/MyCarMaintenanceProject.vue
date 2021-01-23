@@ -1,7 +1,7 @@
 <template>
     <div class="hello">
         <h1>{{ msg }}</h1>
-        <table>
+        <table v-if="projects.length>0">
             <thead>
             <tr>
                 <td>保养项目</td>
