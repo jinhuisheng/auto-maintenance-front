@@ -15,7 +15,9 @@
                 <td>{{index+1}}</td>
                 <td>{{item.name}}</td>
                 <td>{{item.type}}</td>
-                <td>{{item.cycle}}</td>
+                <td v-if="item.unit=='day'">{{item.cycle +' 天'}}</td>
+                <td v-else-if="item.unit=='month'">{{item.cycle +' 月'}}</td>
+                <td v-else>{{item.cycle +' 年'}}</td>
                 <td>{{item.lastMaintainDate}}</td>
             </tr>
             </tbody>
