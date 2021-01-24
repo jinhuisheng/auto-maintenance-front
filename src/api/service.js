@@ -1,5 +1,5 @@
 import axios from 'axios'
 
-export function getxxx () {
+export function getMaintenanceProjects () {
   return axios.get('/say/hello')
 }

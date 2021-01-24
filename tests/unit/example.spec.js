@@ -1,11 +1,10 @@
 import MyCarMaintenanceProject from '@/components/MyCarMaintenanceProject.vue'
-import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
-import { getxxx } from '../../src/api/index'
+import { getMaintenanceProjects } from '../../src/api/service'
 import { flushPromises } from '../flushPromises'
-jest.mock('../../src/api/index.js', () => {
+jest.mock('../../src/api/service.js', () => {
   return {
-    getxxx: jest.fn().mockResolvedValue([
+    getMaintenanceProjects: jest.fn().mockResolvedValue([
       {
         name: '机油',
         type: '保养',

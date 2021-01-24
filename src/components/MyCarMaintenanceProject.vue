@@ -25,7 +25,7 @@
 
 <script>
 
-import { getxxx } from '../api'
+import { getMaintenanceProjects } from '../api/service'
 
 export default {
   name: 'MyCarMaintenanceProject',
@@ -38,7 +38,7 @@ export default {
     }
   },
   async created () {
-    this.projects = await getxxx()
+    this.projects = await getMaintenanceProjects()
     console.log(this.projects)
   },
   mounted () {
