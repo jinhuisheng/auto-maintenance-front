@@ -24,35 +24,26 @@
 </template>
 
 <script>
+
+import { getxxx } from '../api'
+
 export default {
   name: 'MyCarMaintenanceProject',
   props: {
-    msg: String,
-    projects: Array
+    msg: String
+  },
+  data () {
+    return {
+      projects: []
+    }
+  },
+  async created () {
+    this.projects = await getxxx()
+    console.log(this.projects)
   },
   mounted () {
     this.msg = '我的爱车保养'
+    console.log(this.msg)
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-    h3 {
-        margin: 40px 0 0;
-    }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    a {
-        color: #42b983;
-    }
-</style>
